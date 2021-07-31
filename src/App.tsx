@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Component } from "react";
+import CardList from "./Components/Card-List/CardList";
+import SearchBox from "./Components/SearchBox/SearchBox";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state: AppState;
+  constructor() {
+    super({});
+    this.state = {
+      robots: [],
+      input: '',
+    }
+  }
+
+  async componentDidMount() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
+    switch (res.status) {
+      case 200: {
+        const robots = await res.json();
+        this.setState({ robots });
+      }
+    }
+  }
+
+  setInput = (event: Event) => {
+    this.setState({ input: (event.target as HTMLInputElement)?.value});
+  }
+
+  get robots() {
+    return this.state.robots.filter(robots => robots.name.toLowerCase().includes(this.state.input.toLowerCase()))
+  }
+
+  render() {
+    return (
+      <div className="app">
+        <h1> Monsters Rolodex</h1>
+        <SearchBox setInput={this.setInput}/>
+        <CardList robots={this.robots}/>
+      </div>
+    )
+  }
 }
 
 export default App;
