@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Vinayak1337/robo-app/static/css/main.df84c817.chunk.css",
+    "main.js": "/Vinayak1337/robo-app/static/js/main.179e4434.chunk.js",
+    "main.js.map": "/Vinayak1337/robo-app/static/js/main.179e4434.chunk.js.map",
+    "runtime-main.js": "/Vinayak1337/robo-app/static/js/runtime-main.232550a3.js",
+    "runtime-main.js.map": "/Vinayak1337/robo-app/static/js/runtime-main.232550a3.js.map",
+    "static/js/2.db194c8b.chunk.js": "/Vinayak1337/robo-app/static/js/2.db194c8b.chunk.js",
+    "static/js/2.db194c8b.chunk.js.map": "/Vinayak1337/robo-app/static/js/2.db194c8b.chunk.js.map",
+    "index.html": "/Vinayak1337/robo-app/index.html",
+    "static/css/main.df84c817.chunk.css.map": "/Vinayak1337/robo-app/static/css/main.df84c817.chunk.css.map",
+    "static/js/2.db194c8b.chunk.js.LICENSE.txt": "/Vinayak1337/robo-app/static/js/2.db194c8b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.232550a3.js",
+    "static/js/2.db194c8b.chunk.js",
+    "static/css/main.df84c817.chunk.css",
+    "static/js/main.179e4434.chunk.js"
+  ]
+}
