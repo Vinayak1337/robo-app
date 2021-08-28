@@ -14,7 +14,7 @@ interface CardProps {
 }
 
 interface SearchBoxProps {
-    setInput: (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => void;
+    setInput: (event: Event<HTMLInputElement>) => void;
 }
 interface Robot {
     id:       number;

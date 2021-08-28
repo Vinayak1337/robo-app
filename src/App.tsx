@@ -34,9 +34,15 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1> Monsters Rolodex</h1>
-        <SearchBox setInput={this.setInput}/>
-        <CardList robots={this.robots}/>
+        {
+          this.robots?
+          <div>
+            <h1> Monsters Rolodex</h1>
+            <SearchBox setInput={this.setInput}/>
+            <CardList robots={this.robots}/>
+          </div>
+          : <h1>Loading...</h1>
+        }
       </div>
     )
   }
