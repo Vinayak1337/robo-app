@@ -2,4 +2,4 @@
 
 [Main page](https://monsters-rolodex-webapp.netlify.app)
 
-A SPA react pwa written in typescript.
+A simple installable SPA written in typescript & react.
